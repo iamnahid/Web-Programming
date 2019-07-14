@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+<body>
+
+<h1> Registration Form </h1>
+<form action="array.php" method="post">
+	<p style="color:blue;"> First Name:</p> 
+	<input type="text" name="firstname"/>
+	<br>
+	
+	<p style="color:blue;"> Last Name: </p>
+	<input type="text" name="lastname"/>
+	<br>
+	
+	<p style="color:blue;"> Date of Birth: </p>
+		<select name="Day">
+			<option value ="1">1</option>
+			<option value ="2">2</option>
+			<option value ="3">3</option>
+			<option value ="4">4</option>
+			<option value ="5">5</option>
+			<option value ="4">6</option>
+			<option value ="5">7</option>
+		</select>
+		
+		<select name="Month">
+			<option value ="Jan">Jan</option>
+			<option value ="feb">Feb</option>
+			<option value ="mar">Mar</option>
+			<option value ="apr">Apr</option>
+			<option value ="may">May</option>
+		</select>
+		
+		<select name="Year">
+			<option value ="1991">1991</option>
+			<option value ="1992">1992</option>
+			<option value ="1993">1993</option>
+			<option value ="1994">1994</option>
+			<option value ="1994">1995</option>
+			<option value ="1994">1996</option>
+			<option value ="1995">1997</option>
+		</select>
+	<br>
+	
+	<p style="color:blue;"> Gender: </p>
+	<input type="radio" name="gender" value="male" > Male<br>
+	<input type="radio" name="gender" value="female"checked> Female<br>
+	<input type="radio" name="gender" value="other" > Other <br>
+	
+	<p style="color:blue;"> Phone: </p>
+	<input type="text" name="phone" value="+880">
+	<br>
+	
+	<p style="color:blue;"> Email: </p>
+	<input type="text" name="email">
+	<br>
+	
+	<p style="color:blue;"> Password: </p>
+	<input type="password" name="pass"> <br>
+	
+	<p style="color:blue;"> Confirm Password: </p>
+	<input type="password" name="Confpass"> 
+	<br>
+	<br>
+	<input type="submit" onclick="alert('Done')"value="Submit">
+</form>
+
+<br> <br> <br>
+
+</body>
+</head>

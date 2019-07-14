@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<head>
+	
+	<style type="text/css">
+        .error {
+            border:2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+<script type="text/javascript">
+
+function test(e){
+	//<link rel="stylesheet" type="text/css" href="myCSS.css" />      //for CSS Modification (*after head Tag)
+	//a=document.form.nm.value;
+	a=document.forms[0].elements[0].value;
+	msg=document.getElementById("m");
+	l1=document.getElementById("fn").value;
+	a1=document.forms[0].elements[1].value;
+	msg1=document.getElementById("n");
+	l2=document.getElementById("ln").value;
+	
+	if (e.getAttribute("name")=="firstname")
+	{
+		if(l1.length>0 && l1.length<25 && e.getAttribute("type")=="text"){
+		
+			msg.innerHTML="Valid";
+			msg.style.color="green";
+			//document.frm.submit();
+			//alert("too short");
+		}
+		else{
+			msg.innerHTML="X Invalid";
+			msg.style.color="red";
+		}
+		
+	}
+	else if(e.getAttribute("name")=="lastname"){
+		
+		if(l2.length>0 && l2.length<15 && e.getAttribute("type")=="text")
+		{
+		
+			msg1.innerHTML="Valid";
+			msg1.style.color="green";
+			//document.frm.submit();
+			//alert("too short");
+		}
+		else{
+			msg1.innerHTML="X Invalid";
+			msg1.style.color="red";
+		}
+		
+		}
+		else
+		{
+			alert("nothing");
+		}
+	
+	
+	//alert(document.frm.ps.value);
+}
+
+function test1(e1){
+	
+	a2 = document.forms[0].elements[3].value;
+	msg2 = document.getElementById("o");
+	l = document.getElementById("c").value;
+	
+	if (l.length > 10) {
+		
+		msg2.innerHTML="X";
+		msg2.style.color="red";
+	
+	}
+	else if (l.length < 10 && l.length!="") {
+		
+		msg2.innerHTML="too Short";
+		msg2.style.color="red";
+		//document.frm.submit();
+		//alert("too short");
+	}
+	else if (l.length == 10 )
+	{
+		msg2.innerHTML="OK";
+		msg2.style.color="green";
+	}
+	else
+	{
+		msg2.innerHTML="X";
+		msg2.style.color="red";
+	}
+	//alert(document.frm.ps.value);
+	
+}
+function checkMail(e) {
+	a3 = document.forms[0].elements[4].value;
+	msg3 = document.getElementById("p");
+    var x = document.getElementById("e").value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        msg3.innerHTML="X";
+		msg3.style.color="red";
+    }
+	else{
+		msg3.innerHTML="OK";
+		msg3.style.color="green";
+	}
+	
+}
+
+function checkPass(e)
+{
+	a4 = document.forms[0].elements[5].value;
+	msg4 = document.getElementById("pp1");
+	pass11 = document.getElementById("p11").value;
+	if (pass11.value !="")
+		{
+			msg4.innerHTML = "Weak";
+			msg4.style.color="yellow";
+			var str = document.getElementById("p11").value;
+			if (str.length < 8) 
+			{
+				msg4.innerHTML = "Min 8 Char";
+				
+				msg4.style.borderColor="red";
+			}
+			else if (str.length > 50) {
+				msg4.innerHTML = "too Long";
+				msg4.style.color="red";
+			}
+			else if (str.search(/\d/) == -1) {
+				msg4.innerHTML = "No num";
+				msg4.style.color="red";
+			}
+			else if (str.search(/[a-zA-Z]/) == -1) {
+				msg4.innerHTML = "No Letter";
+				msg4.style.color="red";
+			}
+			else
+			{
+				msg4.innerHTML = "Okay";
+				msg4.style.color="Green";
+			}
+		}
+	else
+		{
+			msg4.innerHTML = "XXXXXXX";
+			msg4.style.color="red";
+		}
+	
+	
+}
+
+function ConfPass(e1)
+{
+	a5 = document.forms[0].elements[6].value;
+	msg5 = document.getElementById("cc1");
+	conf11 = document.getElementById("c11").value;
+	if( pass11  === conf11 )
+		{
+			msg5.innerHTML = "Matched!";
+			msg5.style.color="green";
+		}
+	else
+		{
+			msg5.innerHTML = "Not Matched!";
+			msg5.style.Color="red";
+		}
+	
+}
+		
+
+
+</script>
+<img src="untitled.jpg" alt="StuGeek" style="width:1080px;height:100px;">
+<h1> Registration Form </h1>
+<label style="color:green;"> Anytime, anywhere you're welcome! </label></br>
+<label style="color:green;"> Feel free to give a try :) </label></br></br>
+<form action="myPhp.php" method="post">
+	<label style="color:blue;"> First Name:    </label> 
+	   <input type="text" onkeydown="test(this)" id="fn" name="firstname"/>  <label id="m"></label>
+	</br>	</br>	
+	<label style="color:blue;"> Last Name:     </label>
+	<input type="text" onkeydown="test(this)" id="ln" name="lastname"/><label id="n"></label>
+	</br>
+	</br>
+	<label style="color:blue;"> Date of Birth: </label>
+		<select name="Day">
+			<option value ="1">1</option>
+			<option value ="2">2</option>
+			<option value ="3">3</option>
+			<option value ="4">4</option>
+			<option value ="5">5</option>
+			<option value ="4">6</option>
+			<option value ="5">7</option>
+		</select>
+		
+		<select name="Month">
+			<option value ="Jan">Jan</option>
+			<option value ="feb">Feb</option>
+			<option value ="mar">Mar</option>
+			<option value ="apr">Apr</option>
+			<option value ="may">May</option>
+		</select>
+		
+		<select name="Year">
+			<option value ="1991">1991</option>
+			<option value ="1992">1992</option>
+			<option value ="1993">1993</option>
+			<option value ="1994">1994</option>
+			<option value ="1994">1995</option>
+			<option value ="1994">1996</option>
+			<option value ="1995">1997</option>
+		</select>
+	</br>
+	
+	<p style="color:blue;"> Gender: </p>
+	<input type="radio" name="gender" value="male" checked> Male<br>
+	<input type="radio" name="gender" value="female"> Female<br>
+	<input type="radio" name="gender" value="other" > Other <br>
+	</br>
+	<label style="color:blue;"> Phone: </label>
+	<input type="text" onkeydown="test1(this)" id="c" name="phone" ><label id="o"></label>
+	</br>	</br>
+	<label style="color:blue;"> Email: </label>
+	<input type="text" onkeydown="checkMail(this)" id="e" name="email"><label id="p"></label>
+	</br></br>
+	<label style="color:blue;"> Password: </label>
+	<input type="password" name="Pass1" onkeyup="checkPass(this)" id="p11" > <label id="pp1"></label>
+	</br></br>
+	<label style="color:blue;"> Confirm Password: </label>
+	<input type="password" name="confpass" onkeyup="ConfPass(this)" id="c11" > <label id="cc1"></label>
+	</br></br>
+	<input type="submit" value="Submit">
+</form>
+
+
+<br> <br> <br>
+
+</body>

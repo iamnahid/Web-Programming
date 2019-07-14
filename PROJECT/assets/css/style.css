@@ -1,0 +1,189 @@
+body{
+	margin:0;
+	font-family:'Roboto', sans-serif;
+}
+h1,h2,h3,h4,h5,h6,p,ul,li,a{
+	margin: 0;
+	padding: 0;
+	text-decoration:none;
+}
+.container {
+	width:1170px;
+	margin:0 auto;
+
+}
+/*====header====*/
+#header {
+	padding:25px 0px;
+	overflow:hidden;
+	background-color:black;
+}
+.logo {
+	float:left;
+	width:20%;
+}
+.menu {
+	float:right;
+}
+.menu ul li {
+	float:left;
+	list-style:none;
+}
+.menu ul li a {
+	padding:0px 50px;
+	text-decoration:none;
+	font-size:16px;
+	line-height:20px;
+	font-weight:bold;
+	color:orange;
+}
+.menu ul li a:hover{
+	color:white;
+}
+
+/*====cover====*/
+#cover{
+	background:url(../images/cover.jpg) no-repeat;
+	background-size:cover;
+	background-position:center center;
+	height:350px;
+}
+
+.name{
+    padding:300px 0px;
+    text-align:left;
+    font-size:30px;
+    color:white;
+}
+
+.cover-content{
+	padding: 170px 0px;
+	margin: 0 auto;
+}
+
+/*.pro-img img{
+	height:auto;
+	width:300px;
+	
+    
+}*/
+
+
+/*====about====*/
+
+#about{
+	overflow:hidden;
+	background:#f8f8f8;
+}
+.section-padding {
+	padding:120px 0px;
+}
+.about-top{
+	margin-bottom: 50px;
+	overflow: hidden;
+}
+
+.about-left {
+	float: left;
+	width: 70%;
+}
+
+.about-right{
+	float:right;
+	width:30%;
+}
+
+.about-right img{
+	height:auto;
+	width:300px;
+}
+
+.about-bottom{
+	text-align:center;
+	font-size:30px;
+	font-weight:700;
+	color:orange;
+}
+
+
+/*====home====*/
+#welcome{
+	overflow:hidden;
+}
+.section-padding{
+	padding:120px 0px;
+}
+.welcome-content{
+	text-align:left;
+	width:620px;
+}
+.welcome-content h2{
+	font-size:30px;
+	color:orange;
+	font-weight:bold;
+	margin-bottom:15px;
+	text-transform: uppercase;
+}
+
+.welcome-content p{
+	font-size: 16px;
+	color: black;
+	margin-bottom:15px;
+	
+}
+
+.button{
+	background:orange;
+	color:white;
+	font-weight:700;
+	padding:10px 20px;
+	text-transform:uppercase;
+	display:inline-block;
+	border-radius:4px;
+	transition: all .25s ease-in-out;
+}
+.button:hover{
+	text-decoration:none;
+	color:black;
+}
+
+/*====quiz room====*/
+
+#page-top{
+	overflow:hidden;
+}
+
+.section-padding{
+	padding:120px 0px;
+}
+
+.top-content{
+	text-align:center;
+}
+
+.top-content h2{
+	font-size:20px;
+	color:orange;
+	font-weight:bold;
+	margin-bottom:10px;
+	text-transform: uppercase;
+}
+
+.top-content h3{
+	font-size:15px;
+	color:orange;
+	font-weight:bold;
+	margin-bottom:10px;
+}
+
+.top-content p{
+	font-size: 16px;
+	color: black;
+	margin-bottom:15px;
+}
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+
+<?php
+	session_start();
+	if ($_SESSION["match"] == "yes")
+	{
+		echo "<h1> Welcome!</h1>";
+		<a href="Signout.php">Signout</a>
+	}
+	?>
+	<?php
+	else
+	{
+		header("Location: Form.html");
+	}
+	
+	
+	?>
+
+</html>

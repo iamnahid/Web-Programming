@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<head>
+<body>
+<script type="text/javascript">
+
+function test(e){
+	//a=document.form.nm.value;
+	a=document.forms[0].elements[0].value;
+	msg=document.getElementById("m");
+	a1=document.forms[0].elements[1].value;
+	msg1=document.getElementById("n");
+		
+	if (e.getAttribute("name")=="firstname")
+	{
+		if(a.length>0 && e.getAttribute("type")=="text"){
+		
+			msg.innerHTML="Valid";
+			msg.style.color="green";
+			//document.frm.submit();
+			//alert("too short");
+		}
+		else{
+			msg.innerHTML="X Invalid";
+			msg.style.color="red";
+		}
+		
+	}
+	
+	else if(e.getAttribute("name")=="lastname"){
+		
+		if(a1.length>0 && e.getAttribute("type")=="text")
+		{
+		
+			msg1.innerHTML="Valid";
+			msg1.style.color="green";
+			//document.frm.submit();
+			//alert("too short");
+		}
+		else{
+			msg1.innerHTML="X Invalid";
+			msg1.style.color="red";
+		}
+		
+		}
+		else
+		{
+			alert("nothing");
+		}
+	
+	
+	//alert(document.frm.ps.value);
+}
+
+function test1(e){
+	//a=document.form.nm.value;
+	
+	a3=document.forms[0].elements[4].value;
+	msg2=document.getElementById("cl");
+	if( a3.length>0 && e.getAttribute("type")=="text"){
+		
+		msg2.innerHTML="Valid";
+		msg2.style.color="green";
+		//document.frm.submit();
+		//alert("too short");
+	}
+	else
+	{
+		msg2.innerHTML="X Invalid";
+		msg2.style.color="red";
+	}
+	//alert(document.frm.ps.value);
+}
+
+</script>
+<h1> Registration Form </h1>
+<form action="myPhp.php" method="post">
+	<p style="color:blue;"> First Name:</p> 
+	<input type="text" onkeydown="test(this)" id="fn" name="firstname"/><p id="m">Empty</p>
+		
+	<p style="color:blue;"> Last Name: </p>
+	<input type="text" onkeydown="test(this)" id="ln" name="lastname"/><p id="n">Empty</p>
+	<br>
+	
+	<p style="color:blue;"> Date of Birth: </p>
+		<select name="Day">
+			<option value ="1">1</option>
+			<option value ="2">2</option>
+			<option value ="3">3</option>
+			<option value ="4">4</option>
+			<option value ="5">5</option>
+			<option value ="4">6</option>
+			<option value ="5">7</option>
+		</select>
+		
+		<select name="Month">
+			<option value ="Jan">Jan</option>
+			<option value ="feb">Feb</option>
+			<option value ="mar">Mar</option>
+			<option value ="apr">Apr</option>
+			<option value ="may">May</option>
+		</select>
+		
+		<select name="Year">
+			<option value ="1991">1991</option>
+			<option value ="1992">1992</option>
+			<option value ="1993">1993</option>
+			<option value ="1994">1994</option>
+			<option value ="1994">1995</option>
+			<option value ="1994">1996</option>
+			<option value ="1995">1997</option>
+		</select>
+	<br>
+	
+	<p style="color:blue;"> Gender: </p>
+	<input type="radio" name="gender" value="male" > Male<br>
+	<input type="radio" name="gender" value="female"checked> Female<br>
+	<input type="radio" name="gender" value="other" > Other <br>
+	
+	<p style="color:blue;"> Phone: </p>
+	<input type="text" onkeydown="test1(this)" id="c" name="phone" ><p id="n">Empty</p>
+	<br>
+	
+	<p style="color:blue;"> Email: </p><p id="m">Empty</p>
+	<input type="text" name="email">
+	<br>
+	
+	<p style="color:blue;"> Password: </p>
+	<input type="password" onkeydown="test(this)" name="pass" id="pas"> <br>
+	
+	<p style="color:blue;"> Confirm Password: </p>
+	<input type="password" name="Confpass"> 
+	<br>
+	<br>
+	<input type="submit" onclick="alert('Done')"value="Submit">
+</form>
+
+
+<br> <br> <br>
+
+</body>
+</head>

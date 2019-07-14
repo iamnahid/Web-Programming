@@ -1,0 +1,7 @@
+venice:italy
+santorini:greece
+london:united kingdom
+brooklyn:usa
+california:usa
+red square:russia
+vatican:italy
